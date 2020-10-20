@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+</head>
+<body>
+
+<p id="doesitwork" onclick="myFunction()">Does it work?</p>
+<script>
+function myFunction() {
+    d = new Date();
+    document.cookie = "test=abcde; expires=" + "May 31 2022 23:59:59 GMT+09:00" + "; path=/";
+    var x = document.cookie;
+    document.getElementById("doesitwork").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
