@@ -95,8 +95,12 @@ window.onload = function(){
 		datas.append("/Data/CFMbrain/653091_20170628_CT_80360_29_"+n+".dcm");
 	}
 
+	document.getElementById("CFMbrain").addEventListener('change', function() {
 		app.loadURLs(CFMbrain);
+	});
+	document.getElementById("ICH_1").addEventListener('change', function() {
 		app.loadURLs(ICH_1);
+	});
 	app.loadURLs(CFMbrain);
 }
 
