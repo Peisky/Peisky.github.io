@@ -75,6 +75,7 @@ app.addEventListener("load", function () {
 
 app.loadURLs(["https://raw.githubusercontent.com/ivmartel/dwv/master/tests/data/bbmri-53323851.dcm"]);
 
+
 window.onload = function(){
 	var rb = document.querySelectorAll(".toolSel");
 	for (var i = 0; i<rb.length;i++){
@@ -85,12 +86,30 @@ window.onload = function(){
 	document.getElementById("CFMbrain")'change', function() {
 		var datas = new Array();
 		for (var i = 1; i <= 180; i++) {
+
+	var CFMbrain = new Array();
+	for (var i = 1; i <= 180; i++) {
 			var n = ('000'+i).slice(-3);
 			datas.append("/Data/CFMbrain/CFM_brain00"+n+".dcm");
 		}
 		app.loadURLs(datas);
 	});
 	
+			CFMbrain.append("/Data/CFMbrain/CFM_brain00"+n+".dcm");
+	}
+	var ICH_1 = new Array();
+	for (var i = 1; i <= 180; i++) {
+		var n = ('000'+i).slice(-2);
+		datas.append("/Data/CFMbrain/653091_20170628_CT_80360_29_"+n+".dcm");
+	}
+
+	document.getElementById("CFMbrain")'change', function() {
+		app.loadURLs(CFMbrain);
+	};
+	document.getElementById("ICH_1")'change', function() {
+		app.loadURLs(ICH_1);
+	};
+	app.loadURLs(["CFMbrain"]);
 }
 
 
