@@ -22,14 +22,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-2">
-			<form id="toolForm">
-				<input type="radio" class="toolSel" id="Wtool" name="tools" value="WindowLevel" checked>
-				<label for="Wtool">Window Level</label><br>
-				<input type="radio" class="toolSel" id="Zap" name="tools" value="ZoomAndPan">
-				<label for="Zap">Zoom And Pan</label><br>
-				<input type="radio" class="toolSel" id="scroll" name="tools" value="Scroll">
-				<label for="Zap">Scroll</label><br>
-			</form>
+				<form id="toolForm">
+					<input type="radio" class="toolSel" id="Wtool" name="tools" value="WindowLevel" checked>
+					<label for="Wtool">Window Level</label><br>
+					<input type="radio" class="toolSel" id="Zap" name="tools" value="ZoomAndPan">
+					<label for="Zap">Zoom And Pan</label><br>
+					<input type="radio" class="toolSel" id="scroll" name="tools" value="Scroll">
+					<label for="scroll">Scroll</label><br>
+				</form>
 			</div>
 			<div class="col-8">
 				
@@ -41,42 +41,38 @@
 				
 			</div>
 			<div class="col-2">
-			<form id="dataForm">
-				<input type="radio" class="DataSel" id="ICH_1" name="datas" checked>
-				<label for="ICH_1">ICH_1</label><br>
-				<input type="radio" class="DataSel" id="CFMbrain" name="datas" >
-				<label for="CFMbrain">CFMbrain</label><br>
-				
-			</form>
+				<form id="dataForm">
+					<input type="radio" class="DataSel" id="ICH_1" name="datas" checked>
+					<label for="ICH_1">ICH_1</label><br>
+					<input type="radio" class="DataSel" id="CFMbrain" name="datas" >
+					<label for="CFMbrain">CFMbrain</label><br>
+					
+				</form>
 			</div>
 		</div>
 		
 	</div>
-	
-	
-	
-	<script>//<![CDATA[
-
-
-// base function to get elements
-dwv.gui.getElement = dwv.gui.base.getElement;
-
-// create the dwv app
-var app = new dwv.App();
-// initialise with the id of the container div
-app.init({
-    "containerDivId": "dwv",
-	"tools" : {"WindowLevel": {},
-				"ZoomAndPan":{},
-			},
-});
-app.addEventListener("load", function () {
-    app.setTool("WindowLevel");
-	<!-- app.setTool("ZoomAndPan"); -->
-});
-
+</body>
+<script>
 
 window.onload = function(){
+		// base function to get elements
+	dwv.gui.getElement = dwv.gui.base.getElement;
+
+	// create the dwv app
+	var app = new dwv.App();
+		// initialise with the id of the container div
+	app.init({
+	    "containerDivId": "dwv",
+		"tools" : {"WindowLevel": {},
+					"ZoomAndPan":{},
+					"Scroll"
+				},
+	});
+	app.addEventListener("load", function () {
+	    app.setTool("WindowLevel");
+		<!-- app.setTool("ZoomAndPan"); -->
+	});
 	var rb = document.querySelectorAll(".toolSel");
 	for (var i = 0; i<rb.length;i++){
 		rb[i].addEventListener('change', function() {
@@ -103,10 +99,7 @@ window.onload = function(){
 		app.loadURLs(ICH_1);
 	});
 	app.loadURLs(ICH_1);
+
 }
-
-
-  //]]> </script>
-</div>
-</body>
+</script>
 </html>
