@@ -67,12 +67,12 @@ window.onload = function(){
 		"tools" : {"WindowLevel": {},
 					"ZoomAndPan":{},
 					"Scroll":{}
-				},
+				}
 	});
 	app.addEventListener("load", function () {
 	    app.setTool("WindowLevel");
-		<!-- app.setTool("ZoomAndPan"); -->
 	});
+	
 	var rb = document.querySelectorAll(".toolSel");
 	for (var i = 0; i<rb.length;i++){
 		rb[i].addEventListener('change', function() {
