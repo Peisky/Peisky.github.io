@@ -40,10 +40,11 @@
 			</div>
 			<div class="col-2">
 			<form id="dataForm">
-				<input type="radio" class="DataSel" id="CFMbrain" name="datas" checked>
-				<label for="CFMbrain">CFMbrain</label><br>
-				<input type="radio" class="DataSel" id="ICH_1" name="datas" >
+				<input type="radio" class="DataSel" id="ICH_1" name="datas" checked>
 				<label for="ICH_1">ICH_1</label><br>
+				<input type="radio" class="DataSel" id="CFMbrain" name="datas" >
+				<label for="CFMbrain">CFMbrain</label><br>
+				
 			</form>
 			</div>
 		</div>
@@ -99,7 +100,7 @@ window.onload = function(){
 	document.getElementById("ICH_1").addEventListener('change', function() {
 		app.loadURLs(ICH_1);
 	});
-	app.loadURLs(CFMbrain);
+	app.loadURLs(ICH_1);
 }
 
 
