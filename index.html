@@ -43,7 +43,7 @@
 				<input type="radio" class="DataSel" id="CFMbrain" name="datas" checked>
 				<label for="CFMbrain">CFMbrain</label><br>
 				<input type="radio" class="DataSel" id="ICH_1" name="datas" >
-				<label for="ICH_1">Zoom And Pan</label><br>
+				<label for="ICH_1">ICH_1</label><br>
 			</form>
 			</div>
 		</div>
@@ -90,7 +90,7 @@ window.onload = function(){
 	var ICH_1 = new Array();
 	for (var i = 1; i <= 180; i++) {
 		var n = ('000'+i).slice(-2);
-		ICH_1.push("/Data/CFMbrain/653091_20170628_CT_80360_29_"+n+".dcm");
+		ICH_1.push("/Data/ICH_1/653091_20170628_CT_80360_29_"+n+".dcm");
 	}
 
 	document.getElementById("CFMbrain").addEventListener('change', function() {
