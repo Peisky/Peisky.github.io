@@ -58,7 +58,7 @@
 window.onload = function(){
 		// base function to get elements
 	dwv.gui.getElement = dwv.gui.base.getElement;
-
+	dwv.gui.displayProgress = function (percent) {};
 	// create the dwv app
 	var app = new dwv.App();
 		// initialise with the id of the container div
@@ -66,7 +66,7 @@ window.onload = function(){
 	    "containerDivId": "dwv",
 		"tools" : {"WindowLevel": {},
 					"ZoomAndPan":{},
-					"Scroll"
+					"Scroll":{}
 				},
 	});
 	app.addEventListener("load", function () {
