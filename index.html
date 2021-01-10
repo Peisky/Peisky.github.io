@@ -27,6 +27,8 @@
 				<label for="Wtool">Window Level</label><br>
 				<input type="radio" class="toolSel" id="Zap" name="tools" value="ZoomAndPan">
 				<label for="Zap">Zoom And Pan</label><br>
+				<input type="radio" class="toolSel" id="scroll" name="tools" value="Scroll">
+				<label for="Zap">Scroll</label><br>
 			</form>
 			</div>
 			<div class="col-8">
@@ -89,7 +91,7 @@ window.onload = function(){
 			CFMbrain.push("/Data/CFMbrain/CFM_brain00"+n+".dcm");
 	}
 	var ICH_1 = new Array();
-	for (var i = 1; i <= 180; i++) {
+	for (var i = 1; i <= 29; i++) {
 		var n = ('000'+i).slice(-2);
 		ICH_1.push("/Data/ICH_1/653091_20170628_CT_80360_29_"+n+".dcm");
 	}
