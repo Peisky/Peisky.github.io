@@ -17,7 +17,7 @@ const b = document.getElementById('btn')
 const d = document.getElementById('display')
 b.addEventListener('click',()=>{getSite()})
 function getSite(){
-    fetch("htt://localhost:5000/").then(res=>{
+    fetch("http://localhost:5000/").then(res=>{
         return res.text()
     }).then(txt=>{
         d.innerText = txt
